@@ -75,9 +75,15 @@
     <Compile Include="Util\ResponseParser.cs" />
     <Compile Include="Util\SerializationHelper.cs" />
     <Compile Include="Util\StreamUtil.cs" />
+    <Compile Include="Properties\VersionInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Properties\VersionInfoBase.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>"$(SolutionDir)util\AssemblyVersionGeneratorFromGit.exe" "$(ProjectDir)\" "$(ProjectDir)Properties\VersionInfo.cs" "$(ProjectDir)Properties\VersionInfoBase.txt"</PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
