@@ -28,12 +28,12 @@ namespace Azyobuzi.TaskingTwLib
         public string OAuthTokenSecret { get; set; }
 
         /// <summary>
-        /// application/x-www-form-urlencoded形式の文字列から<see cref="Token"/>を作成します。
+        /// application/x-www-form-urlencoded形式の文字列から<see cref="T:Token"/>を作成します。
         /// </summary>
         /// <param name="consumerKey">クライアント識別子</param>
         /// <param name="consumerSecret">クライアント共有鍵</param>
         /// <param name="www_form_urlencoded">トークンが格納されたapplication/x-www-form-urlencoded形式の文字列</param>
-        /// <returns>作成された<see cref="Token"/></returns>
+        /// <returns>作成された<see cref="T:Token"/></returns>
         public static Token Create(string consumerKey, string consumerSecret, string www_form_urlencoded)
         {
             var dic = www_form_urlencoded.Split('&')

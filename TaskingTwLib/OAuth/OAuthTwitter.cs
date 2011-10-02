@@ -7,7 +7,6 @@ using Azyobuzi.TaskingTwLib.Util;
 
 namespace Azyobuzi.TaskingTwLib.OAuth
 {
-    //Uxeen.Twitterより
     /// <summary>
     /// OAuth認証系メソッド
     /// </summary>

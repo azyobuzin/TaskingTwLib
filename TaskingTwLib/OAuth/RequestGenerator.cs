@@ -63,7 +63,7 @@ namespace Azyobuzi.TaskingTwLib.OAuth
                 OAuthTwitter.CreateAuthorizationHeader(
                     ub.Uri,
                     null,
-                    string.IsNullOrEmpty(contentType)
+                    string.IsNullOrEmpty(contentType) || contentType == HttpContentType.MultipartFormData
                         ? null
                         : parameters.Select(_ =>
                             new KeyValuePair<string, string>(_.Name, _.Content)),
@@ -76,7 +76,7 @@ namespace Azyobuzi.TaskingTwLib.OAuth
             {
                 switch (contentType)
                 {
-                    case "application/x-www-form-urlencoded":
+                    case HttpContentType.ApplicationXWwwFormUrlencoded:
                         if (parameters.Any(param => param.IsFile)) throw new ArgumentException("application/x-www-form-urlencodedでファイルを送ることはできません。");
 
                         req.ContentType = "application/x-www-form-urlencoded";
@@ -85,7 +85,7 @@ namespace Azyobuzi.TaskingTwLib.OAuth
                             sw.Write(string.Join("&", parameters.Select(data => Uri.EscapeDataString(data.Name) + "=" + Uri.EscapeDataString(data.Content))));
 
                         break;
-                    case "multipart/form-data":
+                    case HttpContentType.MultipartFormData:
                         var boundary = Guid.NewGuid().ToString();
 
                         req.ContentType = "multipart/form-data; boundary=" + boundary;

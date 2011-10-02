@@ -42,7 +42,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataModels\Geo\Coordinates.cs" />
+    <Compile Include="DataModels\Geo\Place.cs" />
+    <Compile Include="DataModels\Source.cs" />
+    <Compile Include="DataModels\Status.cs" />
+    <Compile Include="DataModels\TweetEntities\Entities.cs" />
+    <Compile Include="DataModels\TweetEntities\Entity.cs" />
+    <Compile Include="DataModels\TweetEntities\EntityIndices.cs" />
+    <Compile Include="DataModels\TweetEntities\HashtagEntity.cs" />
+    <Compile Include="DataModels\TweetEntities\MediaEntity.cs" />
+    <Compile Include="DataModels\TweetEntities\PhotoSize.cs" />
+    <Compile Include="DataModels\TweetEntities\UrlEntity.cs" />
+    <Compile Include="DataModels\TweetEntities\UserMentionEntity.cs" />
+    <Compile Include="DataModels\User.cs" />
     <Compile Include="DataModels\UserId.cs" />
+    <Compile Include="HttpContentType.cs" />
     <Compile Include="Methods\OAuth\AccessTokenApi.cs" />
     <Compile Include="Methods\OAuth\RequestTokenApi.cs" />
     <Compile Include="Methods\Tweets\UpdateApi.cs" />
@@ -56,6 +70,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Token.cs" />
     <Compile Include="TwitterApiExecutor.cs" />
+    <Compile Include="Util\MimeTypeHelper.cs" />
+    <Compile Include="Util\SerializationHelper.cs" />
     <Compile Include="Util\StreamUtil.cs" />
   </ItemGroup>
   <ItemGroup />
