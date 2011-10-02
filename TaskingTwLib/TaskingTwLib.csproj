@@ -59,6 +59,7 @@
     <Compile Include="HttpContentType.cs" />
     <Compile Include="Methods\OAuth\AccessTokenApi.cs" />
     <Compile Include="Methods\OAuth\RequestTokenApi.cs" />
+    <Compile Include="Methods\Tweets\TimelinesApi.cs" />
     <Compile Include="Methods\Tweets\UpdateApi.cs" />
     <Compile Include="Util\DateTimeUtil.cs" />
     <Compile Include="DefaultSetting.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Token.cs" />
     <Compile Include="TwitterApiExecutor.cs" />
     <Compile Include="Util\MimeTypeHelper.cs" />
+    <Compile Include="Util\ResponseParser.cs" />
     <Compile Include="Util\SerializationHelper.cs" />
     <Compile Include="Util\StreamUtil.cs" />
   </ItemGroup>

@@ -46,7 +46,7 @@ namespace Azyobuzi.TaskingTwLib.Methods.Tweets
 
         Status ITwitterApi<Status>.Parse(string response, Token token)
         {
-            return Status.Create(response);
+            return ResponseParser.ParseStatus(response);
         }
 
         /// <summary>

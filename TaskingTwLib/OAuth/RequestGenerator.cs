@@ -63,7 +63,7 @@ namespace Azyobuzi.TaskingTwLib.OAuth
                 OAuthTwitter.CreateAuthorizationHeader(
                     ub.Uri,
                     null,
-                    string.IsNullOrEmpty(contentType) || contentType == HttpContentType.MultipartFormData
+                    contentType == HttpContentType.MultipartFormData
                         ? null
                         : parameters.Select(_ =>
                             new KeyValuePair<string, string>(_.Name, _.Content)),
