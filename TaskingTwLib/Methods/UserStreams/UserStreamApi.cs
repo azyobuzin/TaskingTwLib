@@ -37,6 +37,16 @@ namespace Azyobuzi.TaskingTwLib.Methods.UserStreams
                 return new StatusData(line);
             }
 
+            if (json.Element("direct_message") != null)
+            {
+                return new DirectMessageData(line);
+            }
+
+            if (json.Element("delete") != null)
+            {
+                return new DeleteData(line);
+            }
+
             return new RawData(line);
         }
 

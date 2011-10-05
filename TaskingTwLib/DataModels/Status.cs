@@ -35,7 +35,7 @@ namespace Azyobuzi.TaskingTwLib.DataModels
         public string Text { get; set; }
 
         /// <summary>
-        /// ツイートするのに使った<see cref="T:Source"/>
+        /// ツイートするのに使ったクライアントアプリ
         /// </summary>
         public Source Source { get; set; }
 
@@ -50,17 +50,17 @@ namespace Azyobuzi.TaskingTwLib.DataModels
         public bool Favorited { get; set; }
 
         /// <summary>
-        /// 返信先の<see cref="P:Status.Id"/>
+        /// 返信先のID
         /// </summary>
         public ulong InReplyToStatusId { get; set; }
 
         /// <summary>
-        /// 返信先の<see cref="P:User.Id"/>
+        /// 返信先のユーザーID
         /// </summary>
         public long InReplyToUserId { get; set; }
 
         /// <summary>
-        /// 返信先の<see cref="P:User.ScreenName"/>
+        /// 返信先の表示名
         /// </summary>
         public string InReplyToScreenName { get; set; }
 
@@ -75,7 +75,7 @@ namespace Azyobuzi.TaskingTwLib.DataModels
         public bool Retweeted { get; set; }
 
         /// <summary>
-        /// 投稿した<see cref="T:User"/>
+        /// 投稿したユーザー
         /// </summary>
         public User User { get; set; }
 
@@ -90,7 +90,7 @@ namespace Azyobuzi.TaskingTwLib.DataModels
         public Place Place { get; set; }
 
         /// <summary>
-        /// リツイート元の<see cref="T:Status"/>
+        /// リツイート元のツイート
         /// </summary>
         public Status RetweetedStatus { get; set; }
 

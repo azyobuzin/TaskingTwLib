@@ -1,7 +1,7 @@
 ﻿namespace Azyobuzi.TaskingTwLib.DataModels.UserStreams
 {
     /// <summary>
-    /// UserStreamで投げれてきたツイート
+    /// UserStreamで流れてきたツイート
     /// </summary>
     public class StatusData : RawData
     {

@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataModels\DirectMessage.cs" />
     <Compile Include="DataModels\Geo\Coordinates.cs" />
     <Compile Include="DataModels\Geo\Place.cs" />
     <Compile Include="DataModels\Source.cs" />
@@ -60,6 +61,8 @@
     <Compile Include="DataModels\User.cs" />
     <Compile Include="DataModels\UserId.cs" />
     <Compile Include="DataModels\UserStreams\DataKind.cs" />
+    <Compile Include="DataModels\UserStreams\DeleteData.cs" />
+    <Compile Include="DataModels\UserStreams\DirectMessageData.cs" />
     <Compile Include="DataModels\UserStreams\FriendsData.cs" />
     <Compile Include="DataModels\UserStreams\RawData.cs" />
     <Compile Include="DataModels\UserStreams\StatusData.cs" />

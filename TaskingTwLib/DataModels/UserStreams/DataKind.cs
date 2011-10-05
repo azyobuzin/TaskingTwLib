@@ -18,6 +18,21 @@
         /// <summary>
         /// ツイート
         /// </summary>
-        Status
+        Status,
+
+        /// <summary>
+        /// ダイレクトメッセージ
+        /// </summary>
+        DirectMessage,
+
+        /// <summary>
+        /// ツイートが削除された
+        /// </summary>
+        DeleteStatus,
+
+        /// <summary>
+        /// ダイレクトメッセージが削除された
+        /// </summary>
+        DeleteDirectMessage
     }
 }
