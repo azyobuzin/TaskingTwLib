@@ -35,6 +35,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Reactive, Version=1.0.10621.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Main.1.0.10621\lib\Net4\System.Reactive.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
@@ -56,11 +59,17 @@
     <Compile Include="DataModels\TweetEntities\UserMentionEntity.cs" />
     <Compile Include="DataModels\User.cs" />
     <Compile Include="DataModels\UserId.cs" />
+    <Compile Include="DataModels\UserStreams\DataKind.cs" />
+    <Compile Include="DataModels\UserStreams\FriendsData.cs" />
+    <Compile Include="DataModels\UserStreams\RawData.cs" />
+    <Compile Include="DataModels\UserStreams\StatusData.cs" />
     <Compile Include="HttpContentType.cs" />
+    <Compile Include="IStreamingApi.cs" />
     <Compile Include="Methods\OAuth\AccessTokenApi.cs" />
     <Compile Include="Methods\OAuth\RequestTokenApi.cs" />
     <Compile Include="Methods\Tweets\TimelinesApi.cs" />
     <Compile Include="Methods\Tweets\UpdateApi.cs" />
+    <Compile Include="Methods\UserStreams\UserStreamApi.cs" />
     <Compile Include="Util\DateTimeUtil.cs" />
     <Compile Include="DefaultSetting.cs" />
     <Compile Include="FormData.cs" />
@@ -71,6 +80,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Token.cs" />
     <Compile Include="TwitterApiExecutor.cs" />
+    <Compile Include="Util\ExceptionUtil.cs" />
     <Compile Include="Util\MimeTypeHelper.cs" />
     <Compile Include="Util\ResponseParser.cs" />
     <Compile Include="Util\SerializationHelper.cs" />
@@ -80,6 +90,10 @@
   <ItemGroup>
     <Content Include="Properties\VersionInfoBase.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>"$(SolutionDir)util\AssemblyVersionGeneratorFromGit.exe" "$(ProjectDir)\" "$(ProjectDir)Properties\VersionInfo.cs" "$(ProjectDir)Properties\VersionInfoBase.txt"</PreBuildEvent>

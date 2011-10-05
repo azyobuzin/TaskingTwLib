@@ -3,7 +3,7 @@
 namespace Azyobuzi.TaskingTwLib
 {
     /// <summary>
-    /// TwitterAPIを呼び出すインターフェイス
+    /// TwitterAPIのリクエストを表すインターフェイス
     /// </summary>
     /// <typeparam name="TResult">APIからの戻り値の型</typeparam>
     public interface ITwitterApi<TResult>
