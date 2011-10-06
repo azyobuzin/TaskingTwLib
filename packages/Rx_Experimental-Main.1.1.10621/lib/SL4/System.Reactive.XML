@@ -4,6 +4,36 @@
         <name>System.Reactive</name>
     </assembly>
     <members>
+        <member name="T:System.IObservable`1">
+            <summary>
+            Represents a push-style collection.
+            </summary>
+        </member>
+        <member name="M:System.IObservable`1.Subscribe(System.IObserver{`0})">
+            <summary>
+            Subscribes an observer to the observable sequence.
+            </summary>
+        </member>
+        <member name="T:System.IObserver`1">
+            <summary>
+            Supports push-style iteration over an observable sequence.
+            </summary>
+        </member>
+        <member name="M:System.IObserver`1.OnNext(`0)">
+            <summary>
+            Notifies the observer of a new value in the sequence.
+            </summary>
+        </member>
+        <member name="M:System.IObserver`1.OnError(System.Exception)">
+            <summary>
+            Notifies the observer that an exception has occurred.
+            </summary>
+        </member>
+        <member name="M:System.IObserver`1.OnCompleted">
+            <summary>
+            Notifies the observer of the end of the sequence.
+            </summary>
+        </member>
         <member name="T:System.Reactive.Disposables.SingleAssignmentDisposable">
             <summary>
             A SingleAssignmentDisposable only allows a single assignment of its disposable object. If it has already been assigned, attempts to set the underlying object will throw an InvalidOperationException.
@@ -136,6 +166,34 @@
             Event signaling the next element in the data stream.
             </summary>
         </member>
+        <member name="T:System.Reactive.ExperimentalAttribute">
+            <summary>
+            Marks the program elements that are experimental. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="T:System.Reactive.IObserver`2">
+            <summary>
+            Supports push-style iteration over an observable sequence.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.IObserver`2.OnNext(`0)">
+            <summary>
+            Notifies the observer of a new value in the sequence.
+            </summary>
+            <returns>Result returned upon observation of a new value.</returns>
+        </member>
+        <member name="M:System.Reactive.IObserver`2.OnError(System.Exception)">
+            <summary>
+            Notifies the observer that an exception has occurred.
+            </summary>
+            <returns>Result returned upon observation of an error.</returns>
+        </member>
+        <member name="M:System.Reactive.IObserver`2.OnCompleted">
+            <summary>
+            Notifies the observer of the end of the sequence.
+            </summary>
+            <returns>Result returned upon observation of the sequence completion.</returns>
+        </member>
         <member name="T:System.Reactive.Linq.Observable">
             <summary>
             Provides a set of static methods for query operations over observable sequences.
@@ -152,6 +210,66 @@
             </summary>
         </member>
         <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``3(System.Func{``0,``1,System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,``2})">
+            <summary>
+            Converts a Begin/End invoke function pair into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``4(System.Func{``0,``1,``2,System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,``3})">
+            <summary>
+            Converts a Begin/End invoke function pair into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``5(System.Func{``0,``1,``2,``3,System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,``4})">
+            <summary>
+            Converts a Begin/End invoke function pair into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``6(System.Func{``0,``1,``2,``3,``4,System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,``5})">
+            <summary>
+            Converts a Begin/End invoke function pair into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``7(System.Func{``0,``1,``2,``3,``4,``5,System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,``6})">
+            <summary>
+            Converts a Begin/End invoke function pair into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``8(System.Func{``0,``1,``2,``3,``4,``5,``6,System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,``7})">
+            <summary>
+            Converts a Begin/End invoke function pair into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``9(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,``8})">
+            <summary>
+            Converts a Begin/End invoke function pair into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``10(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,``9})">
+            <summary>
+            Converts a Begin/End invoke function pair into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``11(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,``10})">
+            <summary>
+            Converts a Begin/End invoke function pair into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``12(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,``11})">
+            <summary>
+            Converts a Begin/End invoke function pair into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``13(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,``12})">
+            <summary>
+            Converts a Begin/End invoke function pair into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``14(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,``13})">
+            <summary>
+            Converts a Begin/End invoke function pair into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``15(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,``14})">
             <summary>
             Converts a Begin/End invoke function pair into an asynchronous function.
             </summary>
@@ -206,6 +324,126 @@
             Converts the function into an asynchronous function.
             </summary>
         </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``6(System.Func{``0,``1,``2,``3,``4,``5})">
+            <summary>
+            Converts the function into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``6(System.Func{``0,``1,``2,``3,``4,``5},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Converts the function into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``7(System.Func{``0,``1,``2,``3,``4,``5,``6})">
+            <summary>
+            Converts the function into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``7(System.Func{``0,``1,``2,``3,``4,``5,``6},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Converts the function into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``8(System.Func{``0,``1,``2,``3,``4,``5,``6,``7})">
+            <summary>
+            Converts the function into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``8(System.Func{``0,``1,``2,``3,``4,``5,``6,``7},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Converts the function into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``9(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8})">
+            <summary>
+            Converts the function into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``9(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Converts the function into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``10(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9})">
+            <summary>
+            Converts the function into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``10(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Converts the function into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``11(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10})">
+            <summary>
+            Converts the function into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``11(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Converts the function into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``12(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11})">
+            <summary>
+            Converts the function into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``12(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Converts the function into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``13(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12})">
+            <summary>
+            Converts the function into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``13(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Converts the function into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``14(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13})">
+            <summary>
+            Converts the function into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``14(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Converts the function into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``15(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14})">
+            <summary>
+            Converts the function into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``15(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Converts the function into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``16(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14,``15})">
+            <summary>
+            Converts the function into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``16(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14,``15},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Converts the function into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``17(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14,``15,``16})">
+            <summary>
+            Converts the function into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``17(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14,``15,``16},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Converts the function into an asynchronous function.
+            </summary>
+        </member>
         <member name="M:System.Reactive.Linq.Observable.ToAsync(System.Action)">
             <summary>
             Converts the action into an asynchronous function.
@@ -256,6 +494,126 @@
             Converts the action into an asynchronous function.
             </summary>
         </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``5(System.Action{``0,``1,``2,``3,``4})">
+            <summary>
+            Converts the action into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``5(System.Action{``0,``1,``2,``3,``4},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Converts the action into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``6(System.Action{``0,``1,``2,``3,``4,``5})">
+            <summary>
+            Converts the action into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``6(System.Action{``0,``1,``2,``3,``4,``5},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Converts the action into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``7(System.Action{``0,``1,``2,``3,``4,``5,``6})">
+            <summary>
+            Converts the action into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``7(System.Action{``0,``1,``2,``3,``4,``5,``6},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Converts the action into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``8(System.Action{``0,``1,``2,``3,``4,``5,``6,``7})">
+            <summary>
+            Converts the action into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``8(System.Action{``0,``1,``2,``3,``4,``5,``6,``7},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Converts the action into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``9(System.Action{``0,``1,``2,``3,``4,``5,``6,``7,``8})">
+            <summary>
+            Converts the action into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``9(System.Action{``0,``1,``2,``3,``4,``5,``6,``7,``8},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Converts the action into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``10(System.Action{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9})">
+            <summary>
+            Converts the action into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``10(System.Action{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Converts the action into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``11(System.Action{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10})">
+            <summary>
+            Converts the action into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``11(System.Action{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Converts the action into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``12(System.Action{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11})">
+            <summary>
+            Converts the action into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``12(System.Action{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Converts the action into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``13(System.Action{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12})">
+            <summary>
+            Converts the action into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``13(System.Action{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Converts the action into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``14(System.Action{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13})">
+            <summary>
+            Converts the action into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``14(System.Action{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Converts the action into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``15(System.Action{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14})">
+            <summary>
+            Converts the action into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``15(System.Action{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Converts the action into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``16(System.Action{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14,``15})">
+            <summary>
+            Converts the action into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ToAsync``16(System.Action{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14,``15},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Converts the action into an asynchronous function.
+            </summary>
+        </member>
         <member name="M:System.Reactive.Linq.Observable.Start``1(System.Func{``0})">
             <summary>
             Invokes the function asynchronously.
@@ -291,6 +649,66 @@
             Converts a Begin/End invoke function pair into an asynchronous function.
             </summary>
         </member>
+        <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``3(System.Func{``0,``1,``2,System.AsyncCallback,System.Object,System.IAsyncResult},System.Action{System.IAsyncResult})">
+            <summary>
+            Converts a Begin/End invoke function pair into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``4(System.Func{``0,``1,``2,``3,System.AsyncCallback,System.Object,System.IAsyncResult},System.Action{System.IAsyncResult})">
+            <summary>
+            Converts a Begin/End invoke function pair into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``5(System.Func{``0,``1,``2,``3,``4,System.AsyncCallback,System.Object,System.IAsyncResult},System.Action{System.IAsyncResult})">
+            <summary>
+            Converts a Begin/End invoke function pair into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``6(System.Func{``0,``1,``2,``3,``4,``5,System.AsyncCallback,System.Object,System.IAsyncResult},System.Action{System.IAsyncResult})">
+            <summary>
+            Converts a Begin/End invoke function pair into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``7(System.Func{``0,``1,``2,``3,``4,``5,``6,System.AsyncCallback,System.Object,System.IAsyncResult},System.Action{System.IAsyncResult})">
+            <summary>
+            Converts a Begin/End invoke function pair into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``8(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,System.AsyncCallback,System.Object,System.IAsyncResult},System.Action{System.IAsyncResult})">
+            <summary>
+            Converts a Begin/End invoke function pair into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``9(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,System.AsyncCallback,System.Object,System.IAsyncResult},System.Action{System.IAsyncResult})">
+            <summary>
+            Converts a Begin/End invoke function pair into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``10(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,System.AsyncCallback,System.Object,System.IAsyncResult},System.Action{System.IAsyncResult})">
+            <summary>
+            Converts a Begin/End invoke function pair into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``11(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,System.AsyncCallback,System.Object,System.IAsyncResult},System.Action{System.IAsyncResult})">
+            <summary>
+            Converts a Begin/End invoke function pair into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``12(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,System.AsyncCallback,System.Object,System.IAsyncResult},System.Action{System.IAsyncResult})">
+            <summary>
+            Converts a Begin/End invoke function pair into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``13(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,System.AsyncCallback,System.Object,System.IAsyncResult},System.Action{System.IAsyncResult})">
+            <summary>
+            Converts a Begin/End invoke function pair into an asynchronous function.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.FromAsyncPattern``14(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,System.AsyncCallback,System.Object,System.IAsyncResult},System.Action{System.IAsyncResult})">
+            <summary>
+            Converts a Begin/End invoke function pair into an asynchronous function.
+            </summary>
+        </member>
         <member name="M:System.Reactive.Linq.Observable.Aggregate``2(System.IObservable{``0},``1,System.Func{``1,``0,``1})">
             <summary>
             Applies an accumulator function over an observable sequence. The specified seed value is used as the initial accumulator value.
@@ -309,6 +727,13 @@
             <param name="accumulator">An accumulator function to be invoked on each element.</param>
             <returns>An observable sequence containing a single element with the final accumulator value.</returns>
             <remarks>The return value of this operator differs from the corresponding operator on IEnumerable in order to retain asynchronous behavior.</remarks>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.IsEmpty``1(System.IObservable{``0})">
+            <summary>
+            Determines whether an observable sequence is empty.
+            </summary>
+            <param name="source">An observable sequence to check for emptiness.</param>
+            <returns>An observable sequence containing a single element determining whether the source sequence is empty.</returns>
         </member>
         <member name="M:System.Reactive.Linq.Observable.Any``1(System.IObservable{``0})">
             <summary>
@@ -877,6 +1302,16 @@
             <param name="second">Second observable sequence to compare.</param>
             <returns>An observable sequence that contains a single element which indicates whether both sequences are equal.</returns>
             <remarks>The return value of this operator differs from the corresponding operator on IEnumerable in order to retain asynchronous behavior.</remarks>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.GetAwaiter``1(System.IObservable{``0})">
+            <summary>
+            Returns an awaiter that lists all values of the observable sequence.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.Let``2(System.IObservable{``0},System.Func{System.IObservable{``0},System.IObservable{``1}})">
+            <summary>
+            Bind the source to the parameter without sharing subscription side-effects.
+            </summary>
         </member>
         <member name="M:System.Reactive.Linq.Observable.RefCount``1(System.Reactive.Subjects.IConnectableObservable{``0})">
             <summary>
@@ -1566,6 +2001,16 @@
             <returns>The observable sequence with the specified implementation for the Subscribe method.</returns>
             <remarks>Use of this operator is preferred over manual implementation of the IObservable&lt;T&gt; interface.</remarks>
         </member>
+        <member name="M:System.Reactive.Linq.Observable.Create``1(System.Func{System.IObserver{``0},System.Collections.Generic.IEnumerable{System.IObservable{System.Object}}})">
+            <summary>
+            Subscribes to each observable sequence returned by the iteratorMethod in sequence and returns the observable sequence of values sent to the observer given to the iteratorMethod.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.Create(System.Func{System.Collections.Generic.IEnumerable{System.IObservable{System.Object}}})">
+            <summary>
+            Subscribes to each observable sequence returned by the iteratorMethod in sequence and returns the observable sequence of values sent to the observer given to the iteratorMethod.
+            </summary>
+        </member>
         <member name="M:System.Reactive.Linq.Observable.Range(System.Int32,System.Int32)">
             <summary>
             Generates an observable sequence of integral numbers within a specified range.
@@ -1833,6 +2278,29 @@
             </summary>
             <param name="sources">Observable sources competing to react first.</param>
             <returns>An observable sequence that surfaces any of the given sequences, whichever reacted first.</returns>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ForkJoin``3(System.IObservable{``0},System.IObservable{``1},System.Func{``0,``1,``2})">
+            <summary>
+            Runs two observable sequences in parallel and combines their last elemenets.
+            </summary>
+            <param name="first">First observable sequence.</param>
+            <param name="second">Second observable sequence.</param>
+            <param name="resultSelector">Result selector function to invoke with the last elements of both sequences.</param>
+            <returns>An observable sequence with the result of calling the selector function with the last elements of both input sequences.</returns>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ForkJoin``1(System.IObservable{``0}[])">
+            <summary>
+            Runs all observable sequences in parallel and collects their last elements.
+            </summary>
+            <param name="sources">Observable sequence to collect the last elements for.</param>
+            <returns>An observable sequence with an array collecting the last elements of all the input sequences.</returns>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ForkJoin``1(System.Collections.Generic.IEnumerable{System.IObservable{``0}})">
+            <summary>
+            Runs all observable sequences in parallel and collect their last elements.
+            </summary>
+            <param name="sources">Observable sequence to collect the last elements for.</param>
+            <returns>An observable sequence with an array collecting the last elements of all the input sequences.</returns>
         </member>
         <member name="M:System.Reactive.Linq.Observable.TakeUntil``2(System.IObservable{``0},System.IObservable{``1})">
             <summary>
@@ -2136,6 +2604,46 @@
             <param name="observer">Observer whose methods to invoke as part of the source sequence's observation.</param>
             <returns>The source sequence with the side-effecting behavior applied.</returns>
         </member>
+        <member name="M:System.Reactive.Linq.Observable.While``1(System.Func{System.Boolean},System.IObservable{``0})">
+            <summary>
+            Repeats source as long as condition holds.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.If``1(System.Func{System.Boolean},System.IObservable{``0},System.IObservable{``0})">
+            <summary>
+            If condition is true, then thenSource else elseSource.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.If``1(System.Func{System.Boolean},System.IObservable{``0})">
+            <summary>
+            If condition is true, then thenSource else elseSource.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.DoWhile``1(System.IObservable{``0},System.Func{System.Boolean})">
+            <summary>
+            Repeats source as long as condition holds.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.Case``2(System.Func{``0},System.Collections.Generic.IDictionary{``0,System.IObservable{``1}},System.IObservable{``1})">
+            <summary>
+            Uses selector to determine which source in sources to use, uses defaultSource if no match is found.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.Case``2(System.Func{``0},System.Collections.Generic.IDictionary{``0,System.IObservable{``1}},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Uses selector to determine which source in sources to use, empty if no match is found.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.Case``2(System.Func{``0},System.Collections.Generic.IDictionary{``0,System.IObservable{``1}})">
+            <summary>
+            Uses selector to determine which source in sources to use, empty if no match is found.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.For``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.IObservable{``1}})">
+            <summary>
+            Concatenates the observable sequences obtained by running the resultSelector for each element in source.
+            </summary>
+        </member>
         <member name="M:System.Reactive.Linq.Observable.SkipLast``1(System.IObservable{``0},System.Int32)">
             <summary>
             Bypasses a specified number of elements at the end of an observable sequence.
@@ -2152,12 +2660,44 @@
             <param name="count">Number of elements to take from the end of the source sequence.</param>
             <returns>An observable sequence containing the specified number of elements from the of the source sequence.</returns>
         </member>
+        <member name="M:System.Reactive.Linq.Observable.Start``1(System.IObservable{``0})">
+            <summary>
+            Immediately subscribes to source and retains the values in the observable sequence.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.Expand``1(System.IObservable{``0},System.Func{``0,System.IObservable{``0}},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Expands an observable sequence by recursively invoking selector.
+            </summary>
+            <param name="source">Source sequence with the initial elements.</param>
+            <param name="selector">Selector function to invoke for each produced element, resulting in another sequence to which the selector will be invoked recursively again.</param>
+            <param name="scheduler">Scheduler on which to perform the expansion.</param>
+            <returns>An observable sequence containing all the elements produced by the recursive expansion.</returns>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.Expand``1(System.IObservable{``0},System.Func{``0,System.IObservable{``0}})">
+            <summary>
+            Expands an observable sequence by recursively invoking selector.
+            </summary>
+            <param name="source">Source sequence with the initial elements.</param>
+            <param name="selector">Selector function to invoke for each produced element, resulting in another sequence to which the selector will be invoked recursively again.</param>
+            <returns>An observable sequence containing all the elements produced by the recursive expansion.</returns>
+        </member>
         <member name="M:System.Reactive.Linq.Observable.IgnoreElements``1(System.IObservable{``0})">
             <summary>
             Ignores all values in an observable sequence leaving only the termination messages.
             </summary>
             <param name="source">Source sequence.</param>
             <returns>An empty observable sequence that signals termination, successful or exceptional, of the source sequence.</returns>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ManySelect``2(System.IObservable{``0},System.Func{System.IObservable{``0},``1},System.Reactive.Concurrency.IScheduler)">
+            <summary>
+            Comonadic bind operator.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Linq.Observable.ManySelect``2(System.IObservable{``0},System.Func{System.IObservable{``0},``1})">
+            <summary>
+            Comonadic bind operator.
+            </summary>
         </member>
         <member name="M:System.Reactive.Linq.Observable.ElementAt``1(System.IObservable{``0},System.Int32)">
             <summary>
@@ -2875,6 +3415,11 @@
             Compares two objects and returns a value indicating whether one is less than, equal to, or greater than the other.
             </summary>
         </member>
+        <member name="T:System.Reactive.Subjects.ISubject`2">
+            <summary>
+            Represents an object that is both an observable sequence as well as an observer.
+            </summary>
+        </member>
         <member name="T:System.Reactive.NotificationKind">
             <summary>
             Indicates the type of a notification.
@@ -2925,6 +3470,13 @@
             Invokes the observer's method corresponding to the notification.
             </summary>
             <param name="observer">Observer to invoke the notification on.</param>
+        </member>
+        <member name="M:System.Reactive.Notification`1.Accept``1(System.Reactive.IObserver{`0,``0})">
+            <summary>
+            Invokes the observer's method corresponding to the notification and returns the produced result.
+            </summary>
+            <param name="observer">Observer to invoke the notification on.</param>
+            <returns>Result produced by the observation.</returns>
         </member>
         <member name="M:System.Reactive.Notification`1.Accept(System.Action{`0},System.Action{System.Exception},System.Action)">
             <summary>
@@ -3007,6 +3559,13 @@
             </summary>
             <param name="observer">Observer to invoke the notification on.</param>
         </member>
+        <member name="M:System.Reactive.Notification`1.OnNextNotification.Accept``1(System.Reactive.IObserver{`0,``0})">
+            <summary>
+            Invokes the observer's method corresponding to the notification and returns the produced result.
+            </summary>
+            <param name="observer">Observer to invoke the notification on.</param>
+            <returns>Result produced by the observation.</returns>
+        </member>
         <member name="M:System.Reactive.Notification`1.OnNextNotification.Accept(System.Action{`0},System.Action{System.Exception},System.Action)">
             <summary>
             Invokes the delegate corresponding to the notification.
@@ -3075,6 +3634,13 @@
             </summary>
             <param name="observer">Observer to invoke the notification on.</param>
         </member>
+        <member name="M:System.Reactive.Notification`1.OnErrorNotification.Accept``1(System.Reactive.IObserver{`0,``0})">
+            <summary>
+            Invokes the observer's method corresponding to the notification and returns the produced result.
+            </summary>
+            <param name="observer">Observer to invoke the notification on.</param>
+            <returns>Result produced by the observation.</returns>
+        </member>
         <member name="M:System.Reactive.Notification`1.OnErrorNotification.Accept(System.Action{`0},System.Action{System.Exception},System.Action)">
             <summary>
             Invokes the delegate corresponding to the notification.
@@ -3142,6 +3708,13 @@
             Invokes the observer's method corresponding to the notification.
             </summary>
             <param name="observer">Observer to invoke the notification on.</param>
+        </member>
+        <member name="M:System.Reactive.Notification`1.OnCompletedNotification.Accept``1(System.Reactive.IObserver{`0,``0})">
+            <summary>
+            Invokes the observer's method corresponding to the notification and returns the produced result.
+            </summary>
+            <param name="observer">Observer to invoke the notification on.</param>
+            <returns>Result produced by the observation.</returns>
         </member>
         <member name="M:System.Reactive.Notification`1.OnCompletedNotification.Accept(System.Action{`0},System.Action{System.Exception},System.Action)">
             <summary>
@@ -4175,11 +4748,6 @@
             <param name="scheduler">Scheduler to notify observers on.</param>
             <returns>Subject whose messages are synchronized and whose observers are notified on the given scheduler.</returns>
         </member>
-        <member name="T:System.Reactive.Subjects.ISubject`2">
-            <summary>
-            Represents an object that is both an observable sequence as well as an observer.
-            </summary>
-        </member>
         <member name="T:System.Reactive.Subjects.AsyncSubject`1">
             <summary>
             Represents the result of an asynchronous operation.
@@ -4222,6 +4790,29 @@
         <member name="M:System.Reactive.Subjects.AsyncSubject`1.Dispose">
             <summary>
             Unsubscribe all observers and release resources.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Subjects.AsyncSubject`1.GetAwaiter">
+            <summary>
+            Gets an awaitable object for the current AsyncSubject.
+            </summary>
+            <returns>Object that can be awaited.</returns>
+        </member>
+        <member name="M:System.Reactive.Subjects.AsyncSubject`1.OnCompleted(System.Action)">
+            <summary>
+            Specifies a callback action that will be invoked when the subject completes.
+            </summary>
+            <param name="callback">Callback action that will be invoked when the subject completes.</param>
+        </member>
+        <member name="M:System.Reactive.Subjects.AsyncSubject`1.GetResult">
+            <summary>
+            Gets the last element of the subject, potentially blocking until the subject completes successfully or exceptionally.
+            </summary>
+            <returns>The last element of the subject. Throws an InvalidOperationException if no element was received.</returns>
+        </member>
+        <member name="P:System.Reactive.Subjects.AsyncSubject`1.IsCompleted">
+            <summary>
+            Gets whether the AsyncSubject has completed.
             </summary>
         </member>
         <member name="T:System.Reactive.Subjects.BehaviorSubject`1">
@@ -4365,7 +4956,187 @@
             Represents a join pattern.
             </summary>
         </member>
+        <member name="M:System.Reactive.Joins.Pattern`4.And``1(System.IObservable{``0})">
+            <summary>
+            Matches when all observable sequences have an available value.
+            </summary>
+        </member>
         <member name="M:System.Reactive.Joins.Pattern`4.Then``1(System.Func{`0,`1,`2,`3,``0})">
+            <summary>
+            Matches when all observable sequences have an available value and projects the values.
+            </summary>
+        </member>
+        <member name="T:System.Reactive.Joins.Pattern`5">
+            <summary>
+            Represents a join pattern.
+            </summary>    
+        </member>
+        <member name="M:System.Reactive.Joins.Pattern`5.And``1(System.IObservable{``0})">
+            <summary>
+            Matches when all observable sequences have an available value.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Joins.Pattern`5.Then``1(System.Func{`0,`1,`2,`3,`4,``0})">
+            <summary>
+            Matches when all observable sequences have an available value and projects the values.
+            </summary>
+        </member>
+        <member name="T:System.Reactive.Joins.Pattern`6">
+            <summary>
+            Represents a join pattern.
+            </summary>    
+        </member>
+        <member name="M:System.Reactive.Joins.Pattern`6.And``1(System.IObservable{``0})">
+            <summary>
+            Matches when all observable sequences have an available value.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Joins.Pattern`6.Then``1(System.Func{`0,`1,`2,`3,`4,`5,``0})">
+            <summary>
+            Matches when all observable sequences have an available value and projects the values.
+            </summary>
+        </member>
+        <member name="T:System.Reactive.Joins.Pattern`7">
+            <summary>
+            Represents a join pattern.
+            </summary>    
+        </member>
+        <member name="M:System.Reactive.Joins.Pattern`7.And``1(System.IObservable{``0})">
+            <summary>
+            Matches when all observable sequences have an available value.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Joins.Pattern`7.Then``1(System.Func{`0,`1,`2,`3,`4,`5,`6,``0})">
+            <summary>
+            Matches when all observable sequences have an available value and projects the values.
+            </summary>
+        </member>
+        <member name="T:System.Reactive.Joins.Pattern`8">
+            <summary>
+            Represents a join pattern.
+            </summary>    
+        </member>
+        <member name="M:System.Reactive.Joins.Pattern`8.And``1(System.IObservable{``0})">
+            <summary>
+            Matches when all observable sequences have an available value.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Joins.Pattern`8.Then``1(System.Func{`0,`1,`2,`3,`4,`5,`6,`7,``0})">
+            <summary>
+            Matches when all observable sequences have an available value and projects the values.
+            </summary>
+        </member>
+        <member name="T:System.Reactive.Joins.Pattern`9">
+            <summary>
+            Represents a join pattern.
+            </summary>    
+        </member>
+        <member name="M:System.Reactive.Joins.Pattern`9.And``1(System.IObservable{``0})">
+            <summary>
+            Matches when all observable sequences have an available value.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Joins.Pattern`9.Then``1(System.Func{`0,`1,`2,`3,`4,`5,`6,`7,`8,``0})">
+            <summary>
+            Matches when all observable sequences have an available value and projects the values.
+            </summary>
+        </member>
+        <member name="T:System.Reactive.Joins.Pattern`10">
+            <summary>
+            Represents a join pattern.
+            </summary>    
+        </member>
+        <member name="M:System.Reactive.Joins.Pattern`10.And``1(System.IObservable{``0})">
+            <summary>
+            Matches when all observable sequences have an available value.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Joins.Pattern`10.Then``1(System.Func{`0,`1,`2,`3,`4,`5,`6,`7,`8,`9,``0})">
+            <summary>
+            Matches when all observable sequences have an available value and projects the values.
+            </summary>
+        </member>
+        <member name="T:System.Reactive.Joins.Pattern`11">
+            <summary>
+            Represents a join pattern.
+            </summary>    
+        </member>
+        <member name="M:System.Reactive.Joins.Pattern`11.And``1(System.IObservable{``0})">
+            <summary>
+            Matches when all observable sequences have an available value.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Joins.Pattern`11.Then``1(System.Func{`0,`1,`2,`3,`4,`5,`6,`7,`8,`9,`10,``0})">
+            <summary>
+            Matches when all observable sequences have an available value and projects the values.
+            </summary>
+        </member>
+        <member name="T:System.Reactive.Joins.Pattern`12">
+            <summary>
+            Represents a join pattern.
+            </summary>    
+        </member>
+        <member name="M:System.Reactive.Joins.Pattern`12.And``1(System.IObservable{``0})">
+            <summary>
+            Matches when all observable sequences have an available value.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Joins.Pattern`12.Then``1(System.Func{`0,`1,`2,`3,`4,`5,`6,`7,`8,`9,`10,`11,``0})">
+            <summary>
+            Matches when all observable sequences have an available value and projects the values.
+            </summary>
+        </member>
+        <member name="T:System.Reactive.Joins.Pattern`13">
+            <summary>
+            Represents a join pattern.
+            </summary>    
+        </member>
+        <member name="M:System.Reactive.Joins.Pattern`13.And``1(System.IObservable{``0})">
+            <summary>
+            Matches when all observable sequences have an available value.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Joins.Pattern`13.Then``1(System.Func{`0,`1,`2,`3,`4,`5,`6,`7,`8,`9,`10,`11,`12,``0})">
+            <summary>
+            Matches when all observable sequences have an available value and projects the values.
+            </summary>
+        </member>
+        <member name="T:System.Reactive.Joins.Pattern`14">
+            <summary>
+            Represents a join pattern.
+            </summary>    
+        </member>
+        <member name="M:System.Reactive.Joins.Pattern`14.And``1(System.IObservable{``0})">
+            <summary>
+            Matches when all observable sequences have an available value.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Joins.Pattern`14.Then``1(System.Func{`0,`1,`2,`3,`4,`5,`6,`7,`8,`9,`10,`11,`12,`13,``0})">
+            <summary>
+            Matches when all observable sequences have an available value and projects the values.
+            </summary>
+        </member>
+        <member name="T:System.Reactive.Joins.Pattern`15">
+            <summary>
+            Represents a join pattern.
+            </summary>    
+        </member>
+        <member name="M:System.Reactive.Joins.Pattern`15.And``1(System.IObservable{``0})">
+            <summary>
+            Matches when all observable sequences have an available value.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.Joins.Pattern`15.Then``1(System.Func{`0,`1,`2,`3,`4,`5,`6,`7,`8,`9,`10,`11,`12,`13,`14,``0})">
+            <summary>
+            Matches when all observable sequences have an available value and projects the values.
+            </summary>
+        </member>
+        <member name="T:System.Reactive.Joins.Pattern`16">
+            <summary>
+            Represents a join pattern.
+            </summary>    
+        </member>
+        <member name="M:System.Reactive.Joins.Pattern`16.Then``1(System.Func{`0,`1,`2,`3,`4,`5,`6,`7,`8,`9,`10,`11,`12,`13,`14,`15,``0})">
             <summary>
             Matches when all observable sequences have an available value and projects the values.
             </summary>
@@ -4374,6 +5145,88 @@
             <summary>
             Represents an execution plan for join patterns.
             </summary>    
+        </member>
+        <member name="T:System.Reactive.ListObservable`1">
+            <summary>
+            Represents an object that retains the values of the observable sequence and signals the end of the sequence.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.ListObservable`1.#ctor(System.IObservable{`0})">
+            <summary>
+            Constructs an object that retains the values of source and signals the end of the sequence.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.ListObservable`1.IndexOf(`0)">
+            <summary>
+            Determines the index of a specific item in the ListObservable.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.ListObservable`1.Insert(System.Int32,`0)">
+            <summary>
+            Inserts an item to the ListObservable at the specified index.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.ListObservable`1.RemoveAt(System.Int32)">
+            <summary>
+            Removes the ListObservable item at the specified index.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.ListObservable`1.Add(`0)">
+            <summary>
+            Adds an item to the ListObservable.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.ListObservable`1.Clear">
+            <summary>
+            Removes all items from the ListObservable.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.ListObservable`1.Contains(`0)">
+            <summary>
+            Determines whether the ListObservable contains a specific value.
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Reactive.ListObservable`1.CopyTo(`0[],System.Int32)">
+            <summary>
+            Copies the elements of the ListObservable to an System.Array, starting at a particular System.Array index.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.ListObservable`1.Remove(`0)">
+            <summary>
+            Removes the first occurrence of a specific object from the ListObservable.
+            </summary>        
+        </member>
+        <member name="M:System.Reactive.ListObservable`1.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+        </member>
+        <member name="M:System.Reactive.ListObservable`1.Subscribe(System.IObserver{System.Object})">
+            <summary>
+            Subscribes an observer to the ListObservable which will be notified upon completion.
+            </summary>
+        </member>
+        <member name="P:System.Reactive.ListObservable`1.Value">
+            <summary>
+            Returns the last value of the observable sequence.
+            </summary>
+        </member>
+        <member name="P:System.Reactive.ListObservable`1.Item(System.Int32)">
+            <summary>
+            Gets or sets the element at the specified index.
+            </summary>
+        </member>
+        <member name="P:System.Reactive.ListObservable`1.Count">
+            <summary>
+            Gets the number of elements contained in the ListObservable.
+            </summary>
+        </member>
+        <member name="P:System.Reactive.ListObservable`1.IsReadOnly">
+            <summary>
+            Gets a value that indicates whether the ListObservable is read-only.
+            </summary>
         </member>
         <member name="T:System.ObservableExtensions">
             <summary>
