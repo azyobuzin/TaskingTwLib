@@ -49,6 +49,7 @@
     <Compile Include="DataModels\DirectMessage.cs" />
     <Compile Include="DataModels\Geo\Coordinates.cs" />
     <Compile Include="DataModels\Geo\Place.cs" />
+    <Compile Include="DataModels\List.cs" />
     <Compile Include="DataModels\Source.cs" />
     <Compile Include="DataModels\Status.cs" />
     <Compile Include="DataModels\TweetEntities\Entities.cs" />
