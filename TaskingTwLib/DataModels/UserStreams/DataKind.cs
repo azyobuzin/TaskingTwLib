@@ -33,6 +33,11 @@
         /// <summary>
         /// ダイレクトメッセージが削除された
         /// </summary>
-        DeleteDirectMessage
+        DeleteDirectMessage,
+
+        /// <summary>
+        /// イベント
+        /// </summary>
+        Event
     }
 }

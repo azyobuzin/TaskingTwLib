@@ -47,6 +47,11 @@ namespace Azyobuzi.TaskingTwLib.Methods.UserStreams
                 return new DeleteData(line);
             }
 
+            if (json.Element("event") != null)
+            {
+                return new EventData(line);
+            }
+
             return new RawData(line);
         }
 

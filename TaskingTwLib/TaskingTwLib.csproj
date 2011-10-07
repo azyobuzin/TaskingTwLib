@@ -65,6 +65,7 @@
     <Compile Include="DataModels\UserStreams\DataKind.cs" />
     <Compile Include="DataModels\UserStreams\DeleteData.cs" />
     <Compile Include="DataModels\UserStreams\DirectMessageData.cs" />
+    <Compile Include="DataModels\UserStreams\EventData.cs" />
     <Compile Include="DataModels\UserStreams\FriendsData.cs" />
     <Compile Include="DataModels\UserStreams\RawData.cs" />
     <Compile Include="DataModels\UserStreams\StatusData.cs" />
