@@ -11,6 +11,8 @@ namespace Azyobuzi.TaskingTwLib.Methods.Tweets
     /// </summary>
     public class UpdateApi : ITwitterApi<Status>
     {
+        private UpdateApi() { }
+
         private string requestUri;
         string ITwitterApi<Status>.RequestUri
         {

@@ -17,5 +17,18 @@ namespace Azyobuzi.TaskingTwLib.Util
                 .Select(Status.Create)
                 .ToArray();
         }
+
+        public static DirectMessage ParseDirectMessage(string json)
+        {
+            return DirectMessage.Create(json);
+        }
+
+        public static DirectMessage[] ParseDirectMessages(string json)
+        {
+            return SerializationHelper.JsonToXml(json)
+                .Elements()
+                .Select(DirectMessage.Create)
+                .ToArray();
+        }
     }
 }

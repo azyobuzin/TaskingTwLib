@@ -71,6 +71,7 @@
     <Compile Include="DataModels\UserStreams\StatusData.cs" />
     <Compile Include="HttpContentType.cs" />
     <Compile Include="IStreamingApi.cs" />
+    <Compile Include="Methods\DirectMessages\DirectMessagesApi.cs" />
     <Compile Include="Methods\OAuth\AccessTokenApi.cs" />
     <Compile Include="Methods\OAuth\RequestTokenApi.cs" />
     <Compile Include="Methods\Tweets\TimelinesApi.cs" />

@@ -13,7 +13,7 @@ namespace Azyobuzi.TaskingTwLib.DataModels
         /// <summary>
         /// ID
         /// </summary>
-        public long Id { get; set; }
+        public ulong Id { get; set; }
 
         /// <summary>
         /// 送信者のID
@@ -78,7 +78,7 @@ namespace Azyobuzi.TaskingTwLib.DataModels
         public static DirectMessage Create(XElement json)
         {
             var re = new DirectMessage();
-            re.Id = (long)json.Element("id");
+            re.Id = (ulong)json.Element("id");
             re.SenderId = (long)json.Element("sender_id");
             re.Text = json.Element("text").Value;
             re.RecipientId = (long)json.Element("recipient_id");

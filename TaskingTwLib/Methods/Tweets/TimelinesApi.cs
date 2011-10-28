@@ -10,6 +10,8 @@ namespace Azyobuzi.TaskingTwLib.Methods.Tweets
     /// </summary>
     public class TimelinesApi : ITwitterApi<Status[]>
     {
+        private TimelinesApi() { }
+
         private string requestUri;
         string ITwitterApi<Status[]>.RequestUri
         {
@@ -59,7 +61,7 @@ namespace Azyobuzi.TaskingTwLib.Methods.Tweets
         /// <param name="page">ページ</param>
         /// <param name="includeRts">リツイートも取得するかどうか</param>
         /// <returns>リクエスト</returns>
-        public static TimelinesApi Create(TimelineType type, long? userId = null, string screenName = null, int count = 20, int? sinceId = null, int? maxId = null, int page = 1, bool includeRts = false)
+        public static TimelinesApi Create(TimelineType type, long? userId = null, string screenName = null, int count = 20, ulong? sinceId = null, ulong? maxId = null, int page = 1, bool includeRts = false)
         {
             var re = new TimelinesApi();
 

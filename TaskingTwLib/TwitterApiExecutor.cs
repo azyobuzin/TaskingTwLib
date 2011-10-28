@@ -84,9 +84,12 @@ namespace Azyobuzi.TaskingTwLib
                             while (!sr.EndOfStream)
                             {
                                 var line = sr.ReadLine();
-                                
+
                                 if (!string.IsNullOrWhiteSpace(line))
-                                    observer.OnNext(apiMethod.Parse(line));
+                                {
+                                    Scheduler.ThreadPool.Schedule(() =>
+                                       observer.OnNext(apiMethod.Parse(line)));
+                                }
                             }
 
                             observer.OnCompleted();
