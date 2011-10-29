@@ -72,6 +72,8 @@
     <Compile Include="HttpContentType.cs" />
     <Compile Include="IStreamingApi.cs" />
     <Compile Include="Methods\DirectMessages\DirectMessagesApi.cs" />
+    <Compile Include="Methods\Favorites\FavoriteOperationApi.cs" />
+    <Compile Include="Methods\Favorites\FavoritesApi.cs" />
     <Compile Include="Methods\OAuth\AccessTokenApi.cs" />
     <Compile Include="Methods\OAuth\RequestTokenApi.cs" />
     <Compile Include="Methods\Tweets\TimelinesApi.cs" />
@@ -103,6 +105,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>"$(ProjectDir)..\util\AssemblyVersionGeneratorFromGit.exe" "$(ProjectDir)\" "$(ProjectDir)Properties\VersionInfo.cs" "$(ProjectDir)Properties\VersionInfoBase.txt"</PreBuildEvent>
