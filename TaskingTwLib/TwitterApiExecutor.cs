@@ -3,6 +3,7 @@ using System.IO;
 using System.Net;
 using System.Reactive.Concurrency;
 using System.Reactive.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Azyobuzi.TaskingTwLib.OAuth;
 
@@ -19,10 +20,11 @@ namespace Azyobuzi.TaskingTwLib
         /// <typeparam name="T">APIからの戻り値の型</typeparam>
         /// <param name="apiMethod">呼び出すAPI</param>
         /// <param name="token">OAuthトークン</param>
+        /// <param name="cancellationToken">タスクに割り当てられる<see cref="T:CancellationToken"/></param>
         /// <returns>実行中のタスク</returns>
-        public static Task<T> CallApi<T>(this ITwitterApi<T> apiMethod, Token token)
+        public static Task<T> CallApi<T>(this ITwitterApi<T> apiMethod, Token token, CancellationToken? cancellationToken)
         {
-            return Task.Factory.StartNew(() =>
+            Func<T> action = () =>
             {
                 var req = RequestGenerator.GenerateTwitterApiRequest(
                     apiMethod.RequestUri,
@@ -45,7 +47,24 @@ namespace Azyobuzi.TaskingTwLib
                         return apiMethod.Parse(sr.ReadToEnd(), token);
                     }
                 }
-            });
+            };
+
+            if (cancellationToken.HasValue)
+                return Task<T>.Factory.StartNew(action, cancellationToken.Value);
+            else
+                return Task<T>.Factory.StartNew(action);
+        }
+
+        /// <summary>
+        /// TwitterAPIを呼び出します。
+        /// </summary>
+        /// <typeparam name="T">APIからの戻り値の型</typeparam>
+        /// <param name="apiMethod">呼び出すAPI</param>
+        /// <param name="token">OAuthトークン</param>
+        /// <returns>実行中のタスク</returns>
+        public static Task<T> CallApi<T>(this ITwitterApi<T> apiMethod, Token token)
+        {
+            return CallApi(apiMethod, token, null);
         }
 
         /// <summary>
